@@ -1,0 +1,83 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html{
+  scroll-behavior: smooth;
+
+}
+
+
+#hero {
+  background-image: url("./assests/hero-desktop.png");
+  min-height: 100vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+@media (max-width: 576px) {
+  #hero {
+    background-image: url("./assests/hero-mobile.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+}
+
+.ficon:hover {
+  filter: invert(53%) sepia(68%) saturate(434%) hue-rotate(121deg)
+    brightness(101%) contrast(94%);
+}
+
+
+.slick-dots li button:before {
+    opacity: .75;
+    color: white !important;
+}
+
+.category-gradient{
+  position: absolute;
+    top: 0px;
+    bottom: 0px;
+    right: 0px;
+    left: 0px;
+    background-image: linear-gradient(to bottom, var(--tw-gradient-stops));
+    --tw-gradient-from: transparent;
+    --tw-gradient-to: rgb(0 0 0 / 0);
+    --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
+    --tw-gradient-to: #1a1a1a;
+}
+
+
+.preloader {
+  height: 100vh;
+  height: calc(var(--vh, 1vh) * 100);
+  width: 100%;
+  background: black;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 50;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: $white;
+  overflow: hidden !important;
+
+  .texts-container {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    
+     
+      overflow: hidden;
+      font-weight: 800;
+      opacity: 0;
+      color: white;
+
+      /* @include media("<=phone") {
+          font-size: 17px;
+          width: 240px;
+      } */
+  }
+}
